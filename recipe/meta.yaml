@@ -1,4 +1,4 @@
-{% set version = "1.2-14" %}
+{% set version = "1.2-15" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/scam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scam/scam_{{ version }}.tar.gz
-  sha256: cc5086aaab35d0e1969760af191ed7e76f97b65a26a9be623ac8cf0c45a93771
+  sha256: 6fb30a448127409f80682660559bea182b5f7d27530bc695cee90c7ef8105d13
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
