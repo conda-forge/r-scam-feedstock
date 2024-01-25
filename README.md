@@ -3,6 +3,7 @@ About r-scam-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-scam-feedstock/blob/main/LICENSE.txt)
 
+
 About r-scam
 ------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=scam
 Package license: GPL-2.0-or-later
 
 Summary: Routines for generalized additive modelling under shape constraints on the component functions of the linear predictor (Pya and Wood, 2015) <doi:10.1007/s11222-013-9448-7>. Models can contain multiple shape constrained (univariate and/or bivariate) and unconstrained terms. The routines of gam() in package 'mgcv' are used for setting up the model matrix, printing and plotting the results.  Penalized likelihood maximization based on Newton-Raphson method is used to fit a model with multiple smoothing parameter selection by GCV or UBRE/AIC.
+
 About r-scam
 ------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
