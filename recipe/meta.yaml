@@ -1,4 +1,4 @@
-{% set version = "1.2-16" %}
+{% set version = "1.2-17" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/scam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scam/scam_{{ version }}.tar.gz
-  sha256: 67c96fe20004a4ba52994e6cc07d10267939ebf81d2a34245332eb4e43efef24
+  sha256: b33de62a18da930ceee2db73cd951fb47d5855bb58c80331eee2730437e30502
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
