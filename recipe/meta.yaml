@@ -1,15 +1,15 @@
-{% set version = "1.2-21" %}
+{% set version = "1.2-22" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-scam
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/scam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scam/scam_{{ version }}.tar.gz
-  sha256: ff39c37822db521e19b88a694bf70a1209be3a993532d42269b27f2e3f34ddb3
+  sha256: d784e7468fbb720632e8e695cde4e308f01f25fd463e0d80ead892d679562116
 
 build:
   number: 0
@@ -46,8 +46,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=scam
   license: GPL-2.0-or-later
-  summary: Routines for generalized additive modelling under shape constraints on the component functions of the linear predictor (Pya and Wood, 2015) <doi:10.1007/s11222-013-9448-7>. Models can contain multiple shape constrained (univariate and/or bivariate) and unconstrained terms. The routines of gam() in package 'mgcv'
-    are used for setting up the model matrix, printing and plotting the results.  Penalized likelihood maximization based on Newton-Raphson method is used to fit a model with multiple smoothing parameter selection by GCV or UBRE/AIC.
+  summary: Routines for generalized additive modelling under shape constraints on the component functions of the linear predictor (Pya and Wood, 2015) <doi:10.1007/s11222-013-9448-7>. Models can contain multiple shape constrained (univariate and/or bivariate) and unconstrained terms. The routines of gam() in package 
+    'mgcv' are used for setting up the model matrix, printing and plotting the results.  Penalized likelihood maximization based on Newton-Raphson method is used to fit a model with multiple smoothing parameter selection by GCV or UBRE/AIC.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
