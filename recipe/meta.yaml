@@ -1,15 +1,15 @@
-{% set version = "1.2-22" %}
+{% set version = "1.2-23" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-scam
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/scam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scam/scam_{{ version }}.tar.gz
-  sha256: d784e7468fbb720632e8e695cde4e308f01f25fd463e0d80ead892d679562116
+  sha256: e2cf0c5eaae1b8da6d50c9c9a2b05366e6045bab8e4f4fcb082f36c451ebbc27
 
 build:
   number: 0
